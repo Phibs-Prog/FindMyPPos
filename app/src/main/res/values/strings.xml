@@ -1,0 +1,9 @@
+<resources>
+    <string name="flightnumb">Flight Nº/Reg</string>
+    <string name="localswitch">LIS</string>
+    <string name="find">Find</string>
+    <string name="wx">Wx</string>
+    <string name="hint">XXXX</string>
+    <string name="tp">TP</string>
+    <string name="title_activity_image_fullscreen">ImageFullscreenActivity</string>
+</resources>

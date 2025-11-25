@@ -1,0 +1,37 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="titleTextColor">@color/yourColorTitle</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+
+    <style name="AlertDialogThemeWx" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="titleTextColor">#000000</item>
+        <item name="android:windowBackground">@drawable/alert_bckgdwx_rnd</item>
+        <item name="colorPrimaryDark">#000000</item>
+    </style>
+
+    <style name="AlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="titleTextColor">#000000</item>
+        <item name="android:windowBackground">@drawable/alert_bckgd_rnd</item>
+        <item name="colorPrimaryDark">#000000</item>
+    </style>
+
+    <style name="AlertDialogThemeError" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="titleTextColor">#000000</item>
+        <!--<item name="colorPrimary">#AFCEAF</item>-->
+        <item name="android:windowBackground">@drawable/alert_bckgderror_rnd</item>
+        <!--        <item name="android:textColorPrimary">#000000</item>-->
+        <item name="colorAccent">#000000</item>
+        <item name="colorPrimaryDark">#000000</item>
+    </style>
+
+    <style name="Widget.AppTheme.ActionBar.Fullscreen" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+</resources>

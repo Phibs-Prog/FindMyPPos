@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/alpha_bckgd_image"
+    tools:context="com.phibs.findmyaircftstd.MainActivity">
+
+    <!--
+    android:background="#F3F3F3@drawable/plane_park"-->
+<!--    <View-->
+<!--        android:id="@+id/focused"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="#32A0A0A0"-->
+<!--        android:focusable="true"-->
+<!--        android:focusableInTouchMode="true" />-->
+
+    <Switch
+        android:id="@+id/searchSwitch"
+        android:layout_width="wrap_content"
+        android:background="@drawable/bckgd_rounded"
+        android:layout_height="45dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:switchPadding="20dp"
+        android:textSize="20dp"
+        android:elevation="10dp"
+        android:text="@string/flightnumb"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <Switch
+        android:id="@+id/localSwitch"
+        android:layout_width="wrap_content"
+        android:background="@drawable/bckgd_rounded"
+        android:switchPadding="20dp"
+        android:text="@string/localswitch"
+        android:layout_height="45dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="30dp"
+        android:elevation="10dp"
+        android:textSize="20dp"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <TextView
+        android:id="@+id/searchType"
+        android:background="@drawable/bckgd_rounded"
+        android:elevation="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/searchSwitch"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:text="@string/tp"/>
+
+<!--    <AutoCompleteTextView-->
+<!--        android:id="@+id/findData"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="60dp"-->
+<!--        android:layout_marginTop="70dp"-->
+<!--        android:gravity="left"-->
+<!--        android:hint="XXXX"-->
+<!--        android:textColor="#CCCCCC"-->
+<!--        android:textSize="20dp" />-->
+
+    <EditText
+        android:id="@+id/findData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bckgd_rounded_stroke"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/searchSwitch"
+        android:layout_toRightOf="@+id/searchType"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:hint="@string/hint"
+        android:inputType="number"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/findBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="40dp"
+        android:layout_below="@+id/localSwitch"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btn_rounded"
+        android:textColor="#030303"
+        android:elevation="10dp"
+        android:textSize="18dp"
+        android:text="@string/find" />
+
+    <TextView
+        android:id="@+id/rptTimeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/findBtn"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal"
+        android:layout_marginHorizontal="20dp"
+        android:textSize="17dp"
+        android:textColor="#7A7A7A" />
+
+    <TextView
+        android:id="@+id/desTinTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/rptTimeTxt"
+        android:layout_marginTop="15dp"
+        android:gravity="left"
+        android:layout_marginHorizontal="20dp"
+        android:textSize="20dp"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/wxBtn"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/rptTimeTxt"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/btnwx_rounded"
+        android:textColor="#030303"
+        android:elevation="10dp"
+        android:textSize="18dp"
+        android:text="@string/wx" />
+
+
+    <TextView
+        android:id="@+id/regTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/desTinTxt"
+        android:layout_marginTop="15dp"
+        android:gravity="left"
+        android:layout_marginHorizontal="20dp"
+        android:textSize="20dp"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:id="@+id/eqtTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/regTxt"
+        android:layout_marginTop="3dp"
+        android:gravity="left"
+        android:layout_marginHorizontal="20dp"
+        android:textSize="20dp"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:id="@+id/standTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/eqtTxt"
+        android:layout_marginTop="3dp"
+        android:gravity="left"
+        android:layout_marginHorizontal="20dp"
+        android:textSize="20dp"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:id="@+id/origTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/standTxt"
+        android:layout_marginTop="3dp"
+        android:gravity="left"
+        android:layout_marginHorizontal="20dp"
+        android:textSize="20dp"
+        android:textColor="#000000" />
+
+
+    <ImageView
+        android:id="@+id/ldg_plane_icon"
+        android:visibility="invisible"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/origTxt"
+        android:layout_marginTop="3dp"
+        android:gravity="center_horizontal"
+        android:layout_width="29dp"
+        android:layout_height="27dp"
+        app:srcCompat="@drawable/ldg_plane" />
+
+    <TextView
+        android:id="@+id/etaTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@id/ldg_plane_icon"
+        android:layout_below="@+id/origTxt"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="20dp"
+        android:textSize="20dp"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/rmkInTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/etaTxt"
+        android:layout_marginTop="3dp"
+        android:gravity="left"
+        android:layout_marginHorizontal="20dp"
+        android:textSize="20dp"
+        android:textColor="#000000" />
+
+    <ImageView
+        android:id="@+id/toff_plane_icon"
+        android:visibility="invisible"
+        android:layout_below="@+id/rmkInTxt"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_width="29dp"
+        android:layout_height="27dp"
+        app:srcCompat="@drawable/toff_plane" />
+
+    <TextView
+        android:id="@+id/stdTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@id/toff_plane_icon"
+        android:layout_below="@+id/rmkInTxt"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="#000000"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/rmkOutTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/stdTxt"
+        android:layout_marginTop="3dp"
+        android:gravity="left"
+        android:layout_marginHorizontal="20dp"
+        android:textSize="20dp"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/adsAogTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/rmkOutTxt"
+        android:layout_marginTop="3dp"
+        android:gravity="left"
+        android:layout_marginHorizontal="20dp"
+        android:textSize="20dp"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/adsAltTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/adsAogTxt"
+        android:layout_marginTop="20dp"
+        android:gravity="left"
+        android:layout_marginHorizontal="20dp"
+        android:textSize="20dp"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/adsAttTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/adsAltTxt"
+        android:layout_marginTop="3dp"
+        android:gravity="left"
+        android:layout_marginHorizontal="20dp"
+        android:textSize="20dp"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/adsDisTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/adsAttTxt"
+        android:layout_marginTop="3dp"
+        android:gravity="left"
+        android:layout_marginHorizontal="20dp"
+        android:textSize="20dp"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/adsETATxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/adsDisTxt"
+        android:layout_marginTop="3dp"
+        android:gravity="left"
+        android:layout_marginHorizontal="20dp"
+        android:textSize="20dp"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/adsETATxt"
+        android:layout_marginTop="10dp"
+        android:gravity="left"
+        android:layout_marginHorizontal="20dp"
+        android:textSize="10dp"
+        android:textColor="#000000"
+        android:text="F.Machado" />
+
+
+</RelativeLayout>
